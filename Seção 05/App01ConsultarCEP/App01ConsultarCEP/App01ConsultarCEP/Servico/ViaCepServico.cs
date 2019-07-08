@@ -1,16 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using App01ConsultarCEP.Servico.Modelo;
+using Newtonsoft.Json;
+using System.Net;
 
 namespace App01ConsultarCEP.Servico
 {
-    public class ViaCepServico
+    public class ViaCEPServico
     {
         private static string EnderecoURL = "https://viacep.com.br/ws/{0}/json/";
 
-        public static void BuscarEnderecoViaCep(string cep)
+        public static Endereco BuscarEnderecoViaCEP(string cep)
         {
             string NovoEnderecoURL = string.Format(EnderecoURL, cep);
+
+            WebClient WC = new WebClient();
+            string Conteudo = WC.DownloadString(NovoEnderecoURL);
+
+            Endereco end = JsonConvert.DeserializeObject<Endereco>(Conteudo);
+
+            return end;
         }
     }
 }

@@ -17,6 +17,9 @@ namespace App01ConsultarCEP.Servico
 
             Endereco end = JsonConvert.DeserializeObject<Endereco>(Conteudo);
 
+            if (end.cep == null)
+                return null;
+
             return end;
         }
     }

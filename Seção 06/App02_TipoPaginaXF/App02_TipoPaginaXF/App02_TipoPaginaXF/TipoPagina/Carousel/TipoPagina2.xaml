@@ -7,7 +7,7 @@
         <StackLayout VerticalOptions="CenterAndExpand" >
             <Label Text="Tipo de Página" TextColor="Blue"
                 HorizontalOptions="CenterAndExpand" />
-            <Image Source="page.png"/>
+            <Image Source="Page.png"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

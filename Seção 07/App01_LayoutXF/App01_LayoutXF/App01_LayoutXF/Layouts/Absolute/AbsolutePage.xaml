@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App01_LayoutXF.Layouts.Absolute.AbsolutePage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Image AbsoluteLayout.LayoutBounds="0, 0, 400, 200"  Source="palco.jpg" BackgroundColor="LightSlateGray"/>
+            <Image AbsoluteLayout.LayoutBounds="150, 50, 100, 100" Source="parrot_icon.png" BackgroundColor="DarkViolet"/>
+
+            <BoxView AbsoluteLayout.LayoutFlags="WidthProportional" AbsoluteLayout.LayoutBounds="0, 400, 0.8, 100" BackgroundColor="Yellow"/>
+            <BoxView AbsoluteLayout.LayoutFlags="SizeProportional" AbsoluteLayout.LayoutBounds="300, 300, 0.5, 0.5" BackgroundColor="GreenYellow"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
